@@ -1,0 +1,134 @@
+/* Estilização inicial */
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    height: 100vh; /* Garante que o container ocupe a altura total da janela */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px; /* Adjusted width */
+    height: 50px; /* Adjusted height */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tela de login_cadastro */
+
+#div_cadastro {
+    display: none;
+}
+
+.div-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 20%;
+}
+
+.div-campos {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.div-campo {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.div-campo input {
+    text-align: center;
+    height: 20px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    width: 90%;
+}
+
+.div-campo select {
+    text-align: center;
+    height: 20px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    width: 90%;
+}
+
+.div-campo input:focus {
+    border: 1px solid gray;
+    outline: none;
+    box-shadow: 0 0 7px gray;
+    transition: all 0.2s ease-in-out;
+}
+
+.div-rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-rodape span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.botao-entrar {
+    align-self: flex-end;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    background-color: white;
+}
+
+.botao-entrar:hover {
+    border: 1px solid gray;
+    box-shadow: 0 0 5px gray;
+    transition: all 0.2s ease-in-out;
+}
+
+.botao-trocar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.botao-trocar .link {
+    color: blue;    
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
