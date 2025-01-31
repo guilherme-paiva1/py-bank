@@ -131,4 +131,27 @@ body {
     cursor: pointer;
 }
 
+.div-bloco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 30px;
+}
 
+.div-bloco button {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    background-color: white;
+    cursor: pointer;
+}
+
+.div-bloco.acoes {
+    flex-direction: row;
+}
