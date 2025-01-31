@@ -31,10 +31,3 @@ def cadastrar_conta(dados):
     status = user.cadastrar(conta_bancaria)
     
     return status
-
-def carregar_conta(conta):
-    dados_dono = conta["dono"]
-    dono = Pessoa(dados_dono["nome"], dados_dono["sexo"], dados_dono["cpf"], dados_dono["renda"])
-    conta_bancaria = Conta(dono, conta["saldo"], conta["credito_disponivel"], conta["fatura"])
-
-    # return conta_bancaria

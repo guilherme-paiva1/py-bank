@@ -8,8 +8,6 @@ def entrar(cpf, senha):
         cpf_atual = conta["dono"]["cpf"]
         senha_atual = conta["dono"]["senha"]
 
-        print("CPF atual da iteração: ", cpf_atual)
-        print("Senha atual da iteração: ", senha_atual)
         # Verifica se o CPF e senha informados são iguais às informações atuais da iteração
         if cpf == cpf_atual and senha_atual == senha:
             return conta

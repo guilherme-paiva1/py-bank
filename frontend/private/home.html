@@ -14,32 +14,91 @@
 </head>
 
 <body>
+    <div class="modal" id="modalDeposito">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Depósito</h2>
+                <span class="fechar" onclick="fecharModal(modalDeposito)">X</span>
+            </div>
+            <div class="corpo-modal">
+                <label for="valor_deposito">Insira o valor do depósito:</label>
+                <input type="number" id="valor_deposito" placeholder="Valor do depósito">
+                <button class="botao-acao" onclick="depositar()">Depositar</button>
+            </div>
+            <div class="rodape-modal">
+                <button class="botao-acao" onclick="fecharModal(modalDeposito)">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalSaque">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Saque</h2>
+                <span class="fechar" onclick="fecharModal(modalSaque)">X</span>
+            </div>
+            <div class="corpo-modal">
+                <label for="valor_saque">Insira o valor do saque:</label>
+                <input type="number" id="valor_saque" placeholder="Valor do saque">
+                <button class="botao-acao" onclick="sacar()">Sacar</button>
+            </div>
+            <div class="rodape-modal">
+                <button class="botao-acao" onclick="fecharModal(modalSaque)">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalTransferencia">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Transferência</h2>
+                <span class="fechar" onclick="fecharModal(modalTransferencia)">X</span>
+            </div>
+            <div class="corpo-modal">
+                <label for="valor_transferencia">Insira o valor da transferência:</label>
+                <input type="number" id="valor_transferencia" placeholder="Valor da transferência">
+                <label for="conta_destino">Insira a conta de destino:</label>
+                <input type="number" id="conta_destino" placeholder="Conta de destino">
+                <button class="botao-acao" onclick="transferir()">Transferir</button>
+            </div>
+            <div class="rodape-modal">
+                <button class="botao-acao" onclick="fecharModal(modalTransferencia)">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="div-conteudo">
             <div class="div-bloco">
-                <h1>Bem-vindo, user!</h1>
-                <span>Saldo atual: R$ 4000</span>
+                <h1 id="h1_nome"></h1>
+                <span id="span_saldo"></span>
             </div>
 
-            <div class="div-bloco acoes">
-                <button class="botao-acao" onclick="">
-                    <span>Depósito</span>
-                </button>
-                <button class="botao-acao" onclick="">
-                    <span>Saque</span>
-                </button>
-                <button class="botao-acao" onclick="">
-                    <span>Transferência</span>
-                </button>
+            <div class="div-bloco">
+                <h2>Ações</h2>
+                <div class="div-acoes">
+                    <button class="botao-acao" onclick="mostrarModal(modalDeposito)">
+                        <span>Depósito</span>
+                    </button>
+                    <button class="botao-acao" onclick="mostrarModal(modalSaque)">
+                        <span>Saque</span>
+                    </button>
+                    <button class="botao-acao" onclick="mostrarModal(modalTransferencia)">
+                        <span>Transferência</span>
+                    </button>
+                </div>
             </div>
-            
+
             <div class="div-bloco">
                 <h2>Crédito</h2>
-                <span>Crédito disponível: R$ 1000</span>
-                <span>Fatura: R$ 2000</span>
+                <span id="span_credito_disponivel"></span>
+                <span id="span_fatura"></span>
             </div>
         </div>
     </div>
 </body>
 
 </html>
+
+<script src="js/home.js"></script>
+<script src="js/banco.js"></script>

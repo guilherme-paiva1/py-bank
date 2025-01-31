@@ -1,11 +1,6 @@
-function mostrarDiv(div) {
-    if (div == 'div_login') {
-        div_login.style.display = 'flex';
-        div_cadastro.style.display = 'none';
-    } else {
-        div_cadastro.style.display = 'flex';
-        div_login.style.display = 'none';
-    }
+function mostrarDiv(div_mostrar, div_esconder) {
+    div_mostrar.style.display = 'flex'; 
+    div_esconder.style.display = 'none';
 }
 
 async function entrar() {
@@ -16,7 +11,7 @@ async function entrar() {
         const resposta = await fetch("/user/entrar", { 
             method: "POST",
             headers: {
-                "Content-Type": "application/json" // Informando o tipo de conteúdo enviado
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 "cpf": cpf,

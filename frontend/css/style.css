@@ -5,21 +5,20 @@ body {
     padding: 0;
 }
 
-
 .container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh; /* Garante que o container ocupe a altura total da janela */
+    height: 100vh;
 }
 
 .loader {
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #3498db; /* Blue */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
     border-radius: 50%;
-    width: 50px; /* Adjusted width */
-    height: 50px; /* Adjusted height */
+    width: 50px;
+    height: 50px;
     animation: spin 2s linear infinite;
 }
 
@@ -143,7 +142,7 @@ body {
     padding: 30px;
 }
 
-.div-bloco button {
+.botao-acao {
     margin: 10px;
     padding: 5px;
     border-radius: 10px;
@@ -152,6 +151,68 @@ body {
     cursor: pointer;
 }
 
-.div-bloco.acoes {
+.div-acoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     flex-direction: row;
+}
+
+/* Modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.cabecalho-modal {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.cabecalho-modal span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.corpo-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.rodape-modal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
